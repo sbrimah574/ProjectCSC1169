@@ -1,0 +1,7 @@
+variable,valid_n,missing_n,invalid_n,zero_n
+close_friends_n,23649,1997,1,1733
+close_family_n,23851,1795,2,743
+adults_n,25645,1,1,0
+childr_n_0to5,25646,0,0,21311
+childr_n_6to15,25645,1,1,18215
+others_n,25646,0,0,22031

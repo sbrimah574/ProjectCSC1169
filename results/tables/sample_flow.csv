@@ -1,0 +1,4 @@
+stage,n_retained,n_excluded_at_stage,percent_of_original_retained
+Original respondents,25646,0,100.0
+Confirmed age 16+,25631,15,99.94
+Complete core responses among eligible respondents,24431,1200,95.26

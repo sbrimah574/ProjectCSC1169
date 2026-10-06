@@ -1,0 +1,425 @@
+variable,code,label,n
+friends_meet_face,5.0,Every week,5517
+friends_meet_face,3.0,Once a month,4487
+friends_meet_face,2.0,Every two months or less frequently,4189
+friends_meet_face,4.0,Every two weeks,3725
+friends_meet_face,6.0,More than once a week,3687
+friends_meet_face,7.0,Daily,2376
+friends_meet_face,1.0,Never,1184
+friends_meet_face,999.0,Prefer not to say,481
+friends_meet_tele,7.0,Daily,6436
+friends_meet_tele,5.0,Every week,5263
+friends_meet_tele,6.0,More than once a week,5214
+friends_meet_tele,4.0,Every two weeks,2747
+friends_meet_tele,3.0,Once a month,2580
+friends_meet_tele,2.0,Every two months or less frequently,1986
+friends_meet_tele,1.0,Never,1001
+friends_meet_tele,999.0,Prefer not to say,419
+loneliness_ucla_a,1.0,Hardly ever or never,10721
+loneliness_ucla_a,2.0,Some of the time,10443
+loneliness_ucla_a,3.0,Often,4069
+loneliness_ucla_a,999.0,Prefer not to say,413
+loneliness_ucla_b,1.0,Hardly ever or never,12996
+loneliness_ucla_b,2.0,Some of the time,8692
+loneliness_ucla_b,3.0,Often,3456
+loneliness_ucla_b,999.0,Prefer not to say,502
+loneliness_ucla_c,1.0,Hardly ever or never,12471
+loneliness_ucla_c,2.0,Some of the time,9044
+loneliness_ucla_c,3.0,Often,3701
+loneliness_ucla_c,999.0,Prefer not to say,430
+age,47.0,47,694
+age,46.0,46,683
+age,22.0,22,673
+age,32.0,32,644
+age,37.0,37,643
+age,42.0,42,623
+age,38.0,38,621
+age,36.0,36,603
+age,34.0,34,596
+age,50.0,50,596
+age,48.0,48,577
+age,39.0,39,577
+age,49.0,49,560
+age,35.0,35,553
+age,52.0,52,541
+age,40.0,40,540
+age,51.0,51,537
+age,53.0,53,513
+age,54.0,54,505
+age,31.0,31,495
+age,30.0,30,494
+age,33.0,33,489
+age,41.0,41,487
+age,25.0,25,482
+age,43.0,43,481
+age,55.0,55,473
+age,44.0,44,462
+age,45.0,45,461
+age,56.0,56,458
+age,58.0,58,408
+age,57.0,57,407
+age,23.0,23,392
+age,29.0,29,389
+age,59.0,59,381
+age,60.0,60,380
+age,27.0,27,379
+age,26.0,26,375
+age,66.0,66,371
+age,28.0,28,370
+age,24.0,24,368
+age,67.0,67,357
+age,61.0,61,354
+age,21.0,21,336
+age,63.0,63,336
+age,68.0,68,331
+age,20.0,20,329
+age,62.0,62,312
+age,19.0,19,308
+age,18.0,18,292
+age,64.0,64,272
+age,69.0,69,266
+age,65.0,65,250
+age,70.0,70,240
+age,71.0,71,226
+age,72.0,72,187
+age,73.0,73,136
+age,74.0,74,132
+age,76.0,76,110
+age,75.0,75,107
+age,17.0,17,103
+age,77.0,77,70
+age,78.0,78,60
+age,16.0,16,58
+age,79.0,79,52
+age,80.0,80,36
+age,81.0,81,23
+age,82.0,82,16
+age,83.0,83,16
+age,997.0,Implausible value,12
+age,84.0,84,11
+age,86.0,86,7
+age,85.0,85,5
+age,88.0,88,4
+age,87.0,87,4
+age,15.0,15,3
+age,89.0,89,2
+age,91.0,91,1
+age,90.0,90,1
+gender,2.0,Female,13249
+gender,1.0,Male,12203
+gender,3.0,In another way,114
+gender,999.0,Prefer not to say,80
+relationship,3.0,Married or cohabitating,13669
+relationship,1.0,Single,5530
+relationship,2.0,In a relationship,3714
+relationship,4.0,Separated or divorced,1872
+relationship,5.0,Widowed,679
+relationship,999.0,Prefer not to say,182
+work_status,1.0,"In paid work or away temporarily (employee, self-employed, working for your fami",16659
+work_status,6.0,Retired,3659
+work_status,2.0,In education,1555
+work_status,3.0,Unemployed and actively looking for a job,1281
+work_status,7.0,"Doing housework, such as looking after children or other persons",805
+work_status,4.0,Unemployed/ wanting a job but not actively looking for a job,577
+work_status,8.0,Other,556
+work_status,5.0,Permanently sick or disabled,554
+education,4.0,"Completed post secondary vocational studies, or higher education to bachelor lev",9496
+education,3.0,Completed secondary,8226
+education,5.0,"Completed upper level of education to master, doctoral degree or equivalent",6458
+education,2.0,Completed primary,1180
+education,999.0,Prefer not to say,162
+education,1.0,Not completed primary,124
+municipality_type,3.0,"Large town/ city (over 50,000 people)",11480
+municipality_type,2.0,"Small or medium-sized town (50,000 people or less)",7828
+municipality_type,1.0,A rural area or village,6075
+municipality_type,998.0,Don’t know,263
+health_general,2.0,Fairly good,9589
+health_general,3.0,Average,8705
+health_general,1.0,Very good,3470
+health_general,4.0,Fairly poor,2858
+health_general,5.0,Very poor,686
+health_general,999.0,Prefer not to say,338
+health_condition,2.0,No,14220
+health_condition,1.0,Yes,7908
+health_condition,998.0,Don’t know,2864
+health_condition,999.0,Prefer not to say,654
+social_support_a,5.0,All of the time,7301
+social_support_a,4.0,Most of the time,6216
+social_support_a,3.0,Some of the time,3998
+social_support_a,2.0,A little of the time,2691
+social_support_a,1.0,None of the time,2497
+social_support_a,998.0,Don’t know,2358
+social_support_a,999.0,Prefer not to say,585
+social_support_b,5.0,All of the time,7571
+social_support_b,4.0,Most of the time,6545
+social_support_b,3.0,Some of the time,5064
+social_support_b,2.0,A little of the time,3368
+social_support_b,1.0,None of the time,1846
+social_support_b,998.0,Don’t know,752
+social_support_b,999.0,Prefer not to say,500
+social_support_c,4.0,Most of the time,8024
+social_support_c,5.0,All of the time,6573
+social_support_c,3.0,Some of the time,5937
+social_support_c,2.0,A little of the time,2996
+social_support_c,1.0,None of the time,1066
+social_support_c,998.0,Don’t know,651
+social_support_c,999.0,Prefer not to say,399
+social_support_d,5.0,All of the time,8830
+social_support_d,4.0,Most of the time,6441
+social_support_d,3.0,Some of the time,4334
+social_support_d,2.0,A little of the time,2600
+social_support_d,1.0,None of the time,1979
+social_support_d,998.0,Don’t know,893
+social_support_d,999.0,Prefer not to say,569
+family_meet_face,5.0,Every week,5722
+family_meet_face,3.0,Once a month,3999
+family_meet_face,2.0,Every two months or less frequently,3963
+family_meet_face,6.0,More than once a week,3793
+family_meet_face,4.0,Every two weeks,3562
+family_meet_face,7.0,Daily,3021
+family_meet_face,1.0,Never,1165
+family_meet_face,999.0,Prefer not to say,421
+family_meet_tele,7.0,Daily,8337
+family_meet_tele,6.0,More than once a week,5468
+family_meet_tele,5.0,Every week,4871
+family_meet_tele,4.0,Every two weeks,2119
+family_meet_tele,3.0,Once a month,2009
+family_meet_tele,2.0,Every two months or less frequently,1607
+family_meet_tele,1.0,Never,918
+family_meet_tele,999.0,Prefer not to say,317
+social_activities_a,1.0,Never,10397
+social_activities_a,2.0,Every two months or less frequently,5322
+social_activities_a,3.0,Once a month,3444
+social_activities_a,5.0,Every week,2495
+social_activities_a,4.0,Every two weeks,1879
+social_activities_a,6.0,More than once a week,1093
+social_activities_a,999.0,Prefer not to say,608
+social_activities_a,7.0,Daily,408
+friends_n__1,1.0,Number,23650
+friends_n__1,999.0,Prefer not to say,1996
+friends_n__1__open,2.0,2.0,5395
+friends_n__1__open,3.0,3.0,3995
+friends_n__1__open,5.0,5.0,3024
+friends_n__1__open,1.0,1.0,2782
+friends_n__1__open,4.0,4.0,2488
+friends_n__1__open,,,1996
+friends_n__1__open,0.0,0.0,1733
+friends_n__1__open,6.0,6.0,1170
+friends_n__1__open,10.0,10.0,1001
+friends_n__1__open,8.0,8.0,568
+friends_n__1__open,7.0,7.0,427
+friends_n__1__open,20.0,20.0,203
+friends_n__1__open,15.0,15.0,200
+friends_n__1__open,12.0,12.0,163
+friends_n__1__open,9.0,9.0,132
+friends_n__1__open,25.0,25.0,51
+friends_n__1__open,30.0,30.0,39
+friends_n__1__open,11.0,11.0,34
+friends_n__1__open,100.0,100.0,30
+friends_n__1__open,14.0,14.0,27
+friends_n__1__open,16.0,16.0,22
+friends_n__1__open,50.0,50.0,21
+friends_n__1__open,18.0,18.0,20
+friends_n__1__open,13.0,13.0,17
+friends_n__1__open,99.0,99.0,7
+friends_n__1__open,40.0,40.0,7
+friends_n__1__open,22.0,22.0,7
+friends_n__1__open,19.0,19.0,6
+friends_n__1__open,21.0,21.0,6
+friends_n__1__open,17.0,17.0,6
+friends_n__1__open,35.0,35.0,6
+friends_n__1__open,36.0,36.0,5
+friends_n__1__open,34.0,34.0,4
+friends_n__1__open,80.0,80.0,4
+friends_n__1__open,32.0,32.0,4
+friends_n__1__open,24.0,24.0,4
+friends_n__1__open,26.0,26.0,3
+friends_n__1__open,23.0,23.0,3
+friends_n__1__open,28.0,28.0,3
+friends_n__1__open,60.0,60.0,2
+friends_n__1__open,63.0,63.0,2
+friends_n__1__open,42.0,42.0,2
+friends_n__1__open,67.0,67.0,2
+friends_n__1__open,27.0,27.0,2
+friends_n__1__open,59.0,59.0,2
+friends_n__1__open,29.0,29.0,2
+friends_n__1__open,83.0,83.0,1
+friends_n__1__open,44.0,44.0,1
+friends_n__1__open,69.0,69.0,1
+friends_n__1__open,48.0,48.0,1
+friends_n__1__open,51.0,51.0,1
+friends_n__1__open,38.0,38.0,1
+friends_n__1__open,54.0,54.0,1
+friends_n__1__open,77.0,77.0,1
+friends_n__1__open,56.0,56.0,1
+friends_n__1__open,85.0,85.0,1
+friends_n__1__open,55.0,55.0,1
+friends_n__1__open,37.0,37.0,1
+friends_n__1__open,33.0,33.0,1
+friends_n__1__open,98.0,98.0,1
+friends_n__1__open,64.0,64.0,1
+friends_n__1__open,53.0,53.0,1
+friends_n__1__open,52.0,52.0,1
+friends_n__1__open,0.8,0.8,1
+friends_n__1__open,43.0,43.0,1
+family_n__1,1.0,Number,23853
+family_n__1,999.0,Prefer not to say,1793
+family_n__1__open,2.0,2.0,4153
+family_n__1__open,3.0,3.0,4144
+family_n__1__open,4.0,4.0,3345
+family_n__1__open,5.0,5.0,2916
+family_n__1__open,1.0,1.0,2345
+family_n__1__open,,,1793
+family_n__1__open,6.0,6.0,1658
+family_n__1__open,10.0,10.0,1189
+family_n__1__open,7.0,7.0,890
+family_n__1__open,8.0,8.0,881
+family_n__1__open,0.0,0.0,743
+family_n__1__open,9.0,9.0,312
+family_n__1__open,12.0,12.0,283
+family_n__1__open,15.0,15.0,281
+family_n__1__open,20.0,20.0,189
+family_n__1__open,11.0,11.0,129
+family_n__1__open,14.0,14.0,76
+family_n__1__open,16.0,16.0,46
+family_n__1__open,25.0,25.0,42
+family_n__1__open,13.0,13.0,41
+family_n__1__open,30.0,30.0,32
+family_n__1__open,18.0,18.0,26
+family_n__1__open,17.0,17.0,23
+family_n__1__open,22.0,22.0,17
+family_n__1__open,50.0,50.0,11
+family_n__1__open,21.0,21.0,9
+family_n__1__open,19.0,19.0,8
+family_n__1__open,23.0,23.0,7
+family_n__1__open,100.0,100.0,6
+family_n__1__open,40.0,40.0,6
+family_n__1__open,26.0,26.0,5
+family_n__1__open,32.0,32.0,4
+family_n__1__open,24.0,24.0,4
+family_n__1__open,35.0,35.0,3
+family_n__1__open,27.0,27.0,3
+family_n__1__open,65.0,65.0,2
+family_n__1__open,28.0,28.0,2
+family_n__1__open,33.0,33.0,2
+family_n__1__open,58.0,58.0,2
+family_n__1__open,55.0,55.0,2
+family_n__1__open,67.0,67.0,1
+family_n__1__open,80.0,80.0,1
+family_n__1__open,45.0,45.0,1
+family_n__1__open,98.0,98.0,1
+family_n__1__open,90.0,90.0,1
+family_n__1__open,48.0,48.0,1
+family_n__1__open,0.7,0.7,1
+family_n__1__open,88.0,88.0,1
+family_n__1__open,36.0,36.0,1
+family_n__1__open,52.0,52.0,1
+family_n__1__open,31.0,31.0,1
+family_n__1__open,99.0,99.0,1
+family_n__1__open,42.0,42.0,1
+family_n__1__open,66.0,66.0,1
+family_n__1__open,53.0,53.0,1
+family_n__1__open,7.1,7.1,1
+adults_n,2.0,2.0,11745
+adults_n,1.0,1.0,6050
+adults_n,3.0,3.0,4564
+adults_n,4.0,4.0,2310
+adults_n,5.0,5.0,651
+adults_n,6.0,6.0,138
+adults_n,7.0,7.0,35
+adults_n,8.0,8.0,27
+adults_n,30.0,30.0,21
+adults_n,20.0,20.0,16
+adults_n,10.0,10.0,12
+adults_n,9.0,9.0,10
+adults_n,11.0,11.0,9
+adults_n,12.0,12.0,8
+adults_n,15.0,15.0,8
+adults_n,18.0,18.0,7
+adults_n,25.0,25.0,7
+adults_n,14.0,14.0,6
+adults_n,22.0,22.0,4
+adults_n,13.0,13.0,3
+adults_n,17.0,17.0,3
+adults_n,29.0,29.0,3
+adults_n,24.0,24.0,2
+adults_n,28.0,28.0,2
+adults_n,26.0,26.0,1
+adults_n,27.0,27.0,1
+adults_n,9.12,9.12,1
+adults_n,16.0,16.0,1
+adults_n,23.0,23.0,1
+childr_n_0to5,0.0,0,21311
+childr_n_0to5,1.0,1,3306
+childr_n_0to5,2.0,2,831
+childr_n_0to5,3.0,3,103
+childr_n_0to5,5.0,5,33
+childr_n_0to5,4.0,4,29
+childr_n_0to5,9.0,9,8
+childr_n_0to5,6.0,6,8
+childr_n_0to5,8.0,8,7
+childr_n_0to5,10.0,10,6
+childr_n_0to5,7.0,7,4
+childr_n_6to15,0.0,0.0,18215
+childr_n_6to15,1.0,1.0,4901
+childr_n_6to15,2.0,2.0,1993
+childr_n_6to15,3.0,3.0,302
+childr_n_6to15,4.0,4.0,74
+childr_n_6to15,5.0,5.0,38
+childr_n_6to15,6.0,6.0,18
+childr_n_6to15,8.0,8.0,17
+childr_n_6to15,7.0,7.0,14
+childr_n_6to15,15.0,15.0,14
+childr_n_6to15,9.0,9.0,12
+childr_n_6to15,12.0,12.0,11
+childr_n_6to15,10.0,10.0,8
+childr_n_6to15,14.0,14.0,7
+childr_n_6to15,11.0,11.0,6
+childr_n_6to15,20.0,20.0,4
+childr_n_6to15,16.0,16.0,4
+childr_n_6to15,13.0,13.0,4
+childr_n_6to15,18.0,18.0,1
+childr_n_6to15,0.1,0.1,1
+childr_n_6to15,17.0,17.0,1
+childr_n_6to15,19.0,19.0,1
+others_n,0.0,0,22031
+others_n,1.0,1,1352
+others_n,2.0,2,886
+others_n,3.0,3,561
+others_n,4.0,4,350
+others_n,5.0,5,165
+others_n,6.0,6,66
+others_n,8.0,8,35
+others_n,10.0,10,35
+others_n,7.0,7,27
+others_n,50.0,50,25
+others_n,20.0,20,17
+others_n,9.0,9,15
+others_n,15.0,15,14
+others_n,12.0,12,11
+others_n,30.0,30,9
+others_n,11.0,11,5
+others_n,45.0,45,3
+others_n,36.0,36,3
+others_n,14.0,14,3
+others_n,13.0,13,3
+others_n,25.0,25,2
+others_n,22.0,22,2
+others_n,19.0,19,2
+others_n,40.0,40,2
+others_n,18.0,18,2
+others_n,16.0,16,2
+others_n,49.0,49,2
+others_n,21.0,21,2
+others_n,35.0,35,2
+others_n,17.0,17,2
+others_n,47.0,47,1
+others_n,33.0,33,1
+others_n,46.0,46,1
+others_n,24.0,24,1
+others_n,42.0,42,1
+others_n,37.0,37,1
+others_n,32.0,32,1
+others_n,28.0,28,1
+others_n,38.0,38,1
+others_n,26.0,26,1
