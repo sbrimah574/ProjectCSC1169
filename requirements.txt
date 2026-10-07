@@ -1,1 +1,4 @@
-# Write your project dependencies here, one per line.
+pandas
+matplotlib
+seaborn
+jupyter
