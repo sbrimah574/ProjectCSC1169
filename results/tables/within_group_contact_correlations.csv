@@ -1,0 +1,59 @@
+context_variable,group,group_label,contact_variable,valid_n,spearman_rho
+age_group,16-29,16-29,friends_meet_face,4473,-0.203946302123313
+age_group,16-29,16-29,friends_meet_tele,4473,-0.1489157928690377
+age_group,30-44,30-44,friends_meet_face,7905,-0.2095233892862138
+age_group,30-44,30-44,friends_meet_tele,7905,-0.183536413013629
+age_group,45-59,45-59,friends_meet_face,7526,-0.1865856071073543
+age_group,45-59,45-59,friends_meet_tele,7526,-0.16097661452648626
+age_group,60+,60+,friends_meet_face,4527,-0.19333350333784297
+age_group,60+,60+,friends_meet_tele,4527,-0.14166972680015813
+close_friends_group,0,0,friends_meet_face,1633,-0.11338688117615581
+close_friends_group,0,0,friends_meet_tele,1633,-0.07298124594512964
+close_friends_group,1-2,1-2,friends_meet_face,7918,-0.11476597352390469
+close_friends_group,1-2,1-2,friends_meet_tele,7918,-0.05822174546573845
+close_friends_group,3-5,3-5,friends_meet_face,9249,-0.09778981913213154
+close_friends_group,3-5,3-5,friends_meet_tele,9249,-0.07627061077476537
+close_friends_group,6+,6+,friends_meet_face,4125,-0.09254809771859276
+close_friends_group,6+,6+,friends_meet_tele,4125,-0.0868076115571257
+social_support_b,1,None of the time,friends_meet_face,1746,-0.1681732467009281
+social_support_b,1,None of the time,friends_meet_tele,1746,-0.10043237437786157
+social_support_b,2,A little,friends_meet_face,3233,-0.16102128335106233
+social_support_b,2,A little,friends_meet_tele,3233,-0.07798516618285804
+social_support_b,3,Some,friends_meet_face,4898,-0.11365684481015015
+social_support_b,3,Some,friends_meet_tele,4898,-0.07516138504652475
+social_support_b,4,Most,friends_meet_face,6349,-0.1318360193257425
+social_support_b,4,Most,friends_meet_tele,6349,-0.0886596191345086
+social_support_b,5,All of the time,friends_meet_face,7361,-0.07733210270677277
+social_support_b,5,All of the time,friends_meet_tele,7361,-0.05454225942707911
+relationship,1,Single,friends_meet_face,5202,-0.2123956315030912
+relationship,1,Single,friends_meet_tele,5202,-0.13877433344620346
+relationship,2,In a relationship,friends_meet_face,3503,-0.18261312964498785
+relationship,2,In a relationship,friends_meet_tele,3503,-0.17079001141781844
+relationship,3,Married/cohabiting,friends_meet_face,13160,-0.17603825532406195
+relationship,3,Married/cohabiting,friends_meet_tele,13160,-0.15116144256636982
+relationship,4,Separated/divorced,friends_meet_face,1803,-0.20175667227642086
+relationship,4,Separated/divorced,friends_meet_tele,1803,-0.1784006589424871
+relationship,5,Widowed,friends_meet_face,656,-0.19420233480989604
+relationship,5,Widowed,friends_meet_tele,656,-0.13049679442070242
+health_general,1,Very good,friends_meet_face,3306,-0.08961141935833505
+health_general,1,Very good,friends_meet_tele,3306,-0.0997222417467535
+health_general,2,Fairly good,friends_meet_face,9299,-0.10635779631831223
+health_general,2,Fairly good,friends_meet_tele,9299,-0.09945791347072748
+health_general,3,Average,friends_meet_face,8320,-0.13574132548248014
+health_general,3,Average,friends_meet_tele,8320,-0.10844759455000198
+health_general,4,Fairly poor,friends_meet_face,2722,-0.20078950871339923
+health_general,4,Fairly poor,friends_meet_tele,2722,-0.16320967273494796
+health_general,5,Very poor,friends_meet_face,649,-0.25135096865199574
+health_general,5,Very poor,friends_meet_tele,649,-0.16439668054958237
+family_meet_face_group,Monthly or less,Monthly or less,friends_meet_face,8734,-0.13013435809471005
+family_meet_face_group,Monthly or less,Monthly or less,friends_meet_tele,8734,-0.0935681736211733
+family_meet_face_group,Every two weeks,Every two weeks,friends_meet_face,3432,-0.09654750917897789
+family_meet_face_group,Every two weeks,Every two weeks,friends_meet_tele,3432,-0.13404093109354842
+family_meet_face_group,At least weekly,At least weekly,friends_meet_face,12095,-0.11204182254418218
+family_meet_face_group,At least weekly,At least weekly,friends_meet_tele,12095,-0.09180374383110997
+family_meet_tele_group,Monthly or less,Monthly or less,friends_meet_face,4284,-0.12053074465261825
+family_meet_tele_group,Monthly or less,Monthly or less,friends_meet_tele,4284,-0.05428843666209642
+family_meet_tele_group,Every two weeks,Every two weeks,friends_meet_face,2028,-0.0976802366258923
+family_meet_tele_group,Every two weeks,Every two weeks,friends_meet_tele,2028,-0.07326424265489706
+family_meet_tele_group,At least weekly,At least weekly,friends_meet_face,18008,-0.14579581388799345
+family_meet_tele_group,At least weekly,At least weekly,friends_meet_tele,18008,-0.08780617306153526

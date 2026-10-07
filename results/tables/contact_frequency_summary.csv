@@ -1,0 +1,15 @@
+contact_type,frequency_code,frequency,n,percent
+Face-to-face contact,1,Never,1096,4.49
+Face-to-face contact,2,Every two months or less frequently,4105,16.8
+Face-to-face contact,3,Once a month,4364,17.86
+Face-to-face contact,4,Every two weeks,3627,14.85
+Face-to-face contact,5,Every week,5381,22.03
+Face-to-face contact,6,More than once a week,3602,14.74
+Face-to-face contact,7,Daily,2256,9.23
+Remote contact,1,Never,930,3.81
+Remote contact,2,Every two months or less frequently,1919,7.85
+Remote contact,3,Once a month,2496,10.22
+Remote contact,4,Every two weeks,2665,10.91
+Remote contact,5,Every week,5106,20.9
+Remote contact,6,More than once a week,5085,20.81
+Remote contact,7,Daily,6230,25.5

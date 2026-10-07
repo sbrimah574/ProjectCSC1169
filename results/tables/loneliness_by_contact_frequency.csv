@@ -1,0 +1,15 @@
+contact_type,frequency_code,n,mean,sd,median,q1,q3,frequency,iqr
+Face-to-face contact,1,1096,5.96,2.21,6.0,4.0,8.0,Never,4.0
+Face-to-face contact,2,4105,5.47,1.96,5.0,4.0,7.0,Every two months or less frequently,3.0
+Face-to-face contact,3,4364,5.12,1.83,5.0,3.0,6.0,Once a month,3.0
+Face-to-face contact,4,3627,4.98,1.76,5.0,3.0,6.0,Every two weeks,3.0
+Face-to-face contact,5,5381,4.7,1.72,4.0,3.0,6.0,Every week,3.0
+Face-to-face contact,6,3602,4.62,1.68,4.0,3.0,6.0,More than once a week,3.0
+Face-to-face contact,7,2256,4.71,1.83,4.0,3.0,6.0,Daily,3.0
+Remote contact,1,930,5.73,2.19,6.0,3.0,8.0,Never,5.0
+Remote contact,2,1919,5.54,1.97,6.0,4.0,7.0,Every two months or less frequently,3.0
+Remote contact,3,2496,5.33,1.87,5.0,4.0,6.0,Once a month,2.0
+Remote contact,4,2665,5.23,1.81,5.0,4.0,6.0,Every two weeks,2.0
+Remote contact,5,5106,4.86,1.78,5.0,3.0,6.0,Every week,3.0
+Remote contact,6,5085,4.75,1.75,4.0,3.0,6.0,More than once a week,3.0
+Remote contact,7,6230,4.78,1.81,4.0,3.0,6.0,Daily,3.0

@@ -1,0 +1,47 @@
+variable,category,n,percent_of_main_sample
+gender_label,Female,12645,51.75801236134419
+gender_label,Male,11637,47.632106749621386
+gender_label,In another way,99,0.40522287257991896
+gender_label,Missing / non-response,50,0.20465801645450452
+relationship_label,Married or cohabitating,13160,53.86598993082559
+relationship_label,Single,5202,21.29262003192665
+relationship_label,In a relationship,3503,14.338340632802588
+relationship_label,Separated or divorced,1803,7.379968073349433
+relationship_label,Widowed,656,2.6851131758830995
+relationship_label,Missing / non-response,107,0.43796815521263965
+work_status_label,"In paid work or away temporarily (employee, self-employed, working for your fami",16024,65.58880111333961
+work_status_label,Retired,3534,14.46522860300438
+work_status_label,In education,1463,5.988293561458803
+work_status_label,Unemployed and actively looking for a job,1203,4.924071875895379
+work_status_label,"Doing housework, such as looking after children or other persons",743,3.041218124513937
+work_status_label,Permanently sick or disabled,521,2.132536531455937
+work_status_label,Unemployed/ wanting a job but not actively looking for a job,519,2.1243502107977568
+work_status_label,Other,424,1.7354999795341983
+education_label,"Completed post secondary vocational studies, or higher education to bachelor lev",9106,37.272317956694366
+education_label,Completed secondary,7820,32.00851377348451
+education_label,"Completed upper level of education to master, doctoral degree or equivalent",6229,25.496295689902173
+education_label,Completed primary,1081,4.424706315746388
+education_label,Not completed primary,99,0.40522287257991896
+education_label,Missing / non-response,96,0.3929433915926487
+municipality_type_label,"Large town/ city (over 50,000 people)",11044,45.20486267447096
+municipality_type_label,"Small or medium-sized town (50,000 people or less)",7475,30.596373459948428
+municipality_type_label,A rural area or village,5752,23.5438582129262
+municipality_type_label,Missing / non-response,160,0.6549056526544145
+health_general_label,Fairly good,9299,38.062297900208755
+health_general_label,Average,8320,34.05509393802955
+health_general_label,Very good,3306,13.531988047971838
+health_general_label,Fairly poor,2722,11.141582415783226
+health_general_label,Very poor,649,2.6564610535794686
+health_general_label,Missing / non-response,135,0.5525766444271623
+health_condition_label,No,13734,56.2154639597233
+health_condition_label,Yes,7665,31.374073922475542
+health_condition_label,Missing / non-response,3032,12.410462117801154
+age_group,30-44,7905,32.35643240145716
+age_group,45-59,7526,30.80512463673202
+age_group,60+,4527,18.52973680979084
+age_group,16-29,4473,18.308706152019976
+close_friends_group,3-5,9249,37.857639883754246
+close_friends_group,1-2,7918,32.40964348573534
+close_friends_group,6+,4125,16.884286357496624
+close_friends_group,0,1633,6.684130817404117
+close_friends_group,Missing / non-response,1506,6.164299455609676

@@ -1,0 +1,22 @@
+variable,description,valid_n,missing_n,missing_percent_of_main_sample
+age,Age,24431,0,0.0
+gender_label,Gender,24381,50,0.20465801645450452
+relationship_label,Relationship status,24324,107,0.43796815521263965
+work_status_label,Employment status,24431,0,0.0
+education_label,Education,24335,96,0.3929433915926487
+municipality_type_label,Area type,24271,160,0.6549056526544145
+health_general_label,General health,24296,135,0.5525766444271623
+health_condition_label,Long-term health condition,21399,3032,12.410462117801154
+close_friends_n,Number of close friends,22925,1506,6.164299455609676
+close_family_n,Number of close family members,23078,1353,5.538045925258892
+social_support_a,Practical support,21983,2448,10.02005648561254
+social_support_b,Emotional support,23587,844,3.454627317752036
+social_support_c,Companionship support,23766,665,2.72195161884491
+social_support_d,Feeling loved and wanted,23379,1052,4.306004666202775
+family_meet_face,Face-to-face family contact,24261,170,0.6958372559453154
+family_meet_tele,Remote family contact,24320,111,0.45434079652900006
+social_activities_a,Club or association participation,24099,332,1.35892922925791
+adults_n,Adults in budget-sharing household,24430,1,0.0040931603290900904
+childr_n_0to5,Children aged 0-5 in household,24431,0,0.0
+childr_n_6to15,Children aged 6-15 in household,24430,1,0.0040931603290900904
+others_n,Other co-residents,24431,0,0.0
