@@ -4,15 +4,19 @@ Group project for **CSC1169 Introduction to Machine Learning and Data Analytics*
 
 This repository holds the code, outputs and slides for our project. It follows the work from raw survey data through cleaning and exploratory analysis. The modelling stage (Session 12) will be added later.
 
-## Research question
+## Research questions
 
-> Among respondents aged 16 and over in the EU Loneliness Survey 2022, is more frequent face-to-face contact with friends more strongly associated with lower loneliness than more frequent remote contact?
+**RQ1.** Among respondents aged 16 and over in the EU Loneliness Survey 2022, is more frequent contact with friends, both face-to-face and remote (phone, internet or social media), associated with lower loneliness?
 
-**Why we asked it.** How often people see their friends and how connected they feel are not the same thing. Face-to-face and remote contact (phone, internet or social media) may also work differently for keeping up friendships. We wanted to compare how each one relates to loneliness.
+**RQ2.** Is more frequent face-to-face contact more strongly associated with lower loneliness than more frequent remote contact?
 
-**What we expected.** Face-to-face contact would show the stronger negative association with loneliness. In other words, more face-to-face contact would go with lower loneliness more clearly than remote contact would.
+**Why it matters.** Friendships are now kept up both in person and remotely. How often people have contact is also not the same as feeling connected. Previous JRC work has already shown that contact frequency is related to loneliness, so we focus on a narrower question: whether the two forms of contact relate to loneliness differently.
 
-We checked the question against the FINER criteria (feasible, interesting, novel, ethical, relevant; Hulley et al., 2013).
+**Who might care.** Researchers studying loneliness and social relationships, public-health bodies, policymakers, and community organisations and charities working to reduce loneliness and social isolation.
+
+**What we expected.** For RQ1, both forms of contact would show negative associations with loneliness. For RQ2, face-to-face contact would show the stronger one. We would count the RQ2 expectation as **not supported** if remote contact showed an equal or stronger association.
+
+We checked the questions against the FINER criteria: feasible, interesting, novel, ethical, relevant (Hulley et al., 2013).
 
 ## Data
 
