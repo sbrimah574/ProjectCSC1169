@@ -2,7 +2,7 @@
 
 Group project for **CSC1169 Introduction to Machine Learning and Data Analytics**.
 
-This repository holds the code, outputs and slides for our project. It follows the work from raw survey data through cleaning and exploratory analysis. The modelling stage (Session 12) will be added later.
+This repository holds the code and outputs for our project. It follows the work from raw survey data through cleaning and exploratory analysis. The modelling stage (Session 12) will be added later.
 
 ## Research questions
 
@@ -16,17 +16,27 @@ This repository holds the code, outputs and slides for our project. It follows t
 
 **What we expected.** For RQ1, both forms of contact would show negative associations with loneliness. For RQ2, face-to-face contact would show the stronger one. We would count the RQ2 expectation as **not supported** if remote contact showed an equal or stronger association.
 
-We checked the questions against the FINER criteria: feasible, interesting, novel, ethical, relevant (Hulley et al., 2013).
+We checked the questions against the FINER criteria (Hulley et al., 2013):
+
+| Criterion | How our project meets it |
+|---|---|
+| **Feasible** | The dataset contains both contact measures, loneliness and relevant context variables. The analysis is manageable within the module's timeframe. |
+| **Interesting** | We examine whether different ways of maintaining friendships relate differently to feeling lonely. |
+| **Novel** | Our project builds on research about social contact and loneliness by directly comparing face-to-face and remote friendship contact within the same sample, and exploring how these associations vary across relevant social and personal circumstances. |
+| **Ethical** | We use anonymised secondary data, report aggregate results and consider representation and interpretation risks. |
+| **Relevant** | The findings may interest researchers and organisations working on loneliness, and the project applies the module's data-cleaning and exploratory-analysis skills. |
 
 ## Data
 
 **Source:** European Commission, Joint Research Centre. *EU Loneliness Survey 2022*. https://doi.org/10.2905/JRC.V4VT8T8
 
 - 25,646 respondents, 208 variables, 27 EU countries
-- Cross-sectional: everyone was surveyed once, at one point in time
+- Cross-sectional: responses were collected during one survey period, rather than following respondents over time
 - Non-probability online panel: respondents were not randomly selected from the population
 
-The raw data are **not included in this repository** (the `data/` folder is listed in `.gitignore`). To run the notebooks, download these two files from the source above and place them in a `data/` folder at the top of the project:
+Raw data are stored locally in `data/raw/`, and cleaned files are saved in `data/processed/`. The `data/` folder is listed in `.gitignore`, so untracked files in both folders are excluded from Git. Files already tracked by Git are not automatically removed by this rule.
+
+To run the notebooks, download these two files from the source above and place them in `data/raw/` at the top of the project:
 
 - `eu_loneliness_survey_eu27_values.csv`
 - `eu_loneliness_survey_eu27_labels.csv`
@@ -44,6 +54,9 @@ The loneliness score measures how lonely people say they feel. It is not a clini
 ## Repository structure
 
 ```
+├── data/                                       # local files; ignored by Git
+│   ├── raw/                                    # original survey CSV files
+│   └── processed/                              # cleaned datasets from Notebook 1
 ├── notebooks/
 │   ├── 01_data_inspection_and_cleaning.ipynb   # loads raw data, cleans it, builds the analysis sample
 │   └── 02_exploratory_data_analysis.ipynb      # descriptive statistics, plots and correlations
@@ -51,7 +64,7 @@ The loneliness score measures how lonely people say they feel. It is not a clini
 │   ├── figures/                                # all plots from Notebook 2
 │   │   └── presentation/                       # cleaned-up versions used on the slides
 │   └── tables/                                 # summary tables and audit files (CSV)
-├── slides/                                     # presentation slides
+├── slides/                                     # presentation slides; untracked PPTX files ignored
 ├── requirements.txt
 └── README.md
 ```
@@ -62,9 +75,9 @@ The loneliness score measures how lonely people say they feel. It is not a clini
    ```
    pip install -r requirements.txt
    ```
-2. Put the two raw CSV files in `data/` (see **Data** above).
+2. Put the two raw CSV files in `data/raw/` (see **Data** above).
 3. Run `notebooks/01_data_inspection_and_cleaning.ipynb` from top to bottom. This creates the cleaned files in `data/processed/` and the audit tables in `results/tables/`.
-4. Run `notebooks/02_exploratory_data_analysis.ipynb` from top to bottom. This creates the figures and the remaining tables.
+4. Run `notebooks/02_exploratory_data_analysis.ipynb` from top to bottom. This creates the figures and the remaining tables. The final plotting section also exports the larger-font versions to `results/figures/presentation/`.
 
 Both notebooks work whether you open them from the project folder or from inside `notebooks/`. Re-running them overwrites outputs that have the same name.
 
@@ -82,12 +95,16 @@ In total, 95.3% of the original sample was kept.
 
 Key decisions:
 
-- **Checked the basics.** IDs were unique, there were no duplicate rows, and values were within their valid ranges.
-- **Treated "prefer not to say" codes as missing.** Some non-responses were stored as numbers (for example 999) rather than blank cells. We checked the labels file before recoding them, so they were not counted as real answers.
-- **Built the loneliness score only when all three items were answered.** We did not fill in missing answers, because that could change the measures and the relationships we are studying.
+- **Checked the basics.** IDs were unique and there were no exact duplicate rows. We checked valid ranges and treated invalid values as missing.
+- **Treated documented non-response codes as missing.** Some non-responses were stored as numbers (for example 999) rather than blank cells. We checked the labels file before recoding them, so they were not counted as real answers.
+- **Built the loneliness score only when all three items were answered.** We did not fill in missing answers, because that could change the measures and the relationships we are studying. We used `min_count=3` to prevent partial totals.
 - **Used the same people for both contact comparisons.** Requiring complete core answers keeps face-to-face and remote results directly comparable. The trade-off is that excluded people may differ from those we kept.
 - **Kept other cases in a flagged file.** Notebook 1 saves a cleaned version of every row, with flags, so these decisions can be revisited.
 - **Handled other variables separately.** Missing answers on optional context variables (such as number of close friends) only affect the comparisons that use them. They do not shrink the main sample.
+
+### Other variables
+
+Loneliness may relate to several co-occurring circumstances, so we also prepared variables covering age, gender, relationship status, work status, education, municipality type, general health, long-term health conditions, close friends and family, social support, family contact, club participation and household composition. Not every variable was used in every comparison.
 
 ### Analysis
 
@@ -109,8 +126,8 @@ All results are **unweighted** and describe this analysis sample, not the whole 
   | Face-to-face | −0.173 |
   | Remote | −0.139 |
 
-- Face-to-face was slightly stronger, in line with our expectation. We have **not** yet tested whether this difference is statistically significant.
-- People with more close friends reported lower loneliness (mean 6.08 with none vs 4.31 with six or more; n = 22,925). Within each close-friend group, the contact associations stayed negative but became weaker. This weakening did not appear within age groups.
+- Face-to-face had a slightly stronger negative association, descriptively consistent with our expectation. We have **not** yet tested whether this difference is statistically significant.
+- People with more close friends reported lower loneliness (mean 6.08 with none vs 4.31 with six or more; n = 22,925). Within each close-friend group, the contact associations stayed negative but were weaker than in the full sample. This weakening did not appear within age groups. These comparisons do not establish independent effects or show that close-friend numbers explain the association.
 
 These are associations. They do not show that contact causes lower loneliness.
 
@@ -130,7 +147,7 @@ These are associations. They do not show that contact causes lower loneliness.
 
 ## Next steps (Session 12)
 
-- Check and apply the appropriate survey weights
+- Check the survey-weight definitions and determine appropriate weighting for the next analysis
 - Build a model of loneliness that includes contact alongside a justified set of context variables
 - For prediction: fit any preprocessing on training data only, and compare held-out performance against a simple baseline
 - Be transparent that the full dataset has already been explored when reporting model evaluation
