@@ -3,3 +3,4 @@ matplotlib
 seaborn
 jupyter
 joblib
+scikit-learn
