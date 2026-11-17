@@ -1,0 +1,38 @@
+variable,category,n,percent_of_main_sample
+gender_label,Female,12645,51.76
+gender_label,Male,11637,47.63
+gender_label,In another way,99,0.41
+gender_label,Missing / non-response,50,0.2
+relationship_label,Married or cohabitating,13160,53.87
+relationship_label,Single,5202,21.29
+relationship_label,In a relationship,3503,14.34
+relationship_label,Separated or divorced,1803,7.38
+relationship_label,Widowed,656,2.69
+relationship_label,Missing / non-response,107,0.44
+work_status_label,"In paid work or away temporarily (employee, self-employed, working for your fami",16024,65.59
+work_status_label,Retired,3534,14.47
+work_status_label,In education,1463,5.99
+work_status_label,Unemployed and actively looking for a job,1203,4.92
+work_status_label,"Doing housework, such as looking after children or other persons",743,3.04
+work_status_label,Permanently sick or disabled,521,2.13
+work_status_label,Unemployed/ wanting a job but not actively looking for a job,519,2.12
+work_status_label,Other,424,1.74
+education_label,"Completed post secondary vocational studies, or higher education to bachelor lev",9106,37.27
+education_label,Completed secondary,7820,32.01
+education_label,"Completed upper level of education to master, doctoral degree or equivalent",6229,25.5
+education_label,Completed primary,1081,4.42
+education_label,Not completed primary,99,0.41
+education_label,Missing / non-response,96,0.39
+municipality_type_label,"Large town/ city (over 50,000 people)",11044,45.2
+municipality_type_label,"Small or medium-sized town (50,000 people or less)",7475,30.6
+municipality_type_label,A rural area or village,5752,23.54
+municipality_type_label,Missing / non-response,160,0.65
+age_group,30-44,7905,32.36
+age_group,45-59,7526,30.81
+age_group,60+,4527,18.53
+age_group,16-29,4473,18.31
+close_friends_group,3-5,9249,37.86
+close_friends_group,1-2,7918,32.41
+close_friends_group,6+,4125,16.88
+close_friends_group,0,1633,6.68
+close_friends_group,Missing / non-response,1506,6.16
