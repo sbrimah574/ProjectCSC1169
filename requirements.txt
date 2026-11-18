@@ -2,5 +2,6 @@ pandas
 matplotlib
 seaborn
 jupyter
+scipy
+scikit-learn>=1.4
 joblib
-scikit-learn
