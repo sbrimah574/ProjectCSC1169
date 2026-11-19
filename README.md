@@ -121,46 +121,65 @@ These are associations. They do not show that contact causes lower loneliness.
 
 ### Research question and predictors
 
-How well can we predict UCLA loneliness scores, and how much does each type of friendship contact improve predictions beyond the other variables?
+How well can we predict UCLA loneliness scores, and how much does each type of friendship contact improve predictions beyond the contextual information?
 
-We compare contact measures on their own, together, and alongside the same set of context variables:
+We carry forward all the contextual measures prepared in Notebook 01 and explored in Notebook 02:
 
-- **Close friends, relationship status and household composition** describe the social relationships and living arrangements that contact frequency alone cannot capture.
-- **Age, gender, education and employment** allow the model to account for differences in social circumstances across respondents. The JRC analysis of the same survey informed this choice.
-- **Municipality type and country** describe where respondents live and let us examine whether prediction errors differ across municipality types.
+- **Demographics and location** — age, gender, education, employment, municipality type and country.
+- **Relationships and household composition** — relationship status, cleaned close-friend and close-family counts, and the separate adult, child and other household counts.
+- **Support and health** — all four support items, general health and long-term health conditions.
+- **Other social contact and participation** — face-to-face and remote family contact, and the prepared social-participation item.
 
-We kept identifiers, survey weights and the three items used to calculate the loneliness score out of the predictors. We chose the context variables after exploring the data in Presentation 1.
+The JRC analysis and our earlier exploration informed the contextual domains. We include the prepared measures consistently rather than select only those with strong individual correlations. Support and loneliness describe closely related experiences. Health and loneliness were measured at the same time, so their direction of association remains uncertain.
 
-### Model development and evaluation
+We use the cleaned counts instead of their response flags or duplicate source fields. Identifiers, survey weights and the UCLA component items are excluded from the predictors. The four support items remain separate.
 
-In Notebook 03 we reserve 20% of respondents for testing. We fit missing-value handling, category encoding and scaling for the linear models inside the training pipeline. We compare mean and median baselines, linear regression, Ridge, a decision tree and a random forest with the same five cross-validation folds. We select the final model using mean absolute error (MAE). Ridge is used throughout the predictor comparisons so the model type stays consistent.
+### Preparation and model selection
 
-Notebook 04 generates test predictions and reports MAE, RMSE and R². We compare the contact predictor sets on the same test respondents, plot prediction errors, and use permutation importance to see which variables help predict the score. We also check errors by age and municipality type, omitting groups with fewer than 30 test respondents.
+The sample remains 24,431 respondents with complete core responses. We impute missing numerical predictors using training medians and add missingness indicators. Missing categorical responses receive their own category. Age and counts are numerical. We one-hot encode the other predictors, including ordered contact, support and health responses, allowing category-specific relationships without assuming equal steps between codes.
 
-### Survey weights
+We use an 80/20 split (19,544 training, 4,887 test) and compare models with the same five training folds. The pipeline learns preprocessing within each fold. Numerical predictors are scaled for the linear models. We compare median and mean baselines, linear regression, Ridge, a decision tree and a random forest. Cross-validation MAE selects the final model.
 
-Presentation 1 used unweighted results. For Presentation 2, we use the survey's EU27 weight, `w_eu27`, which combines within-country demographic adjustment with country population size. We compare weighted and unweighted rank correlations on the analysis sample, and weighted and unweighted MAE on the same test predictions. Models and cross-validation remain unweighted. The weighted correlations and MAEs are point estimates. The paired bootstrap intervals describe the unweighted comparisons.
+We also compare seven predictor sets using Ridge throughout: each friendship-contact type alone, both together, context alone, and context with either or both contact types. These comparisons assess the additional information supplied by contact using a consistent model type.
 
-### Findings and limitations
+Model selection uses training cross-validation. The test sample has been inspected during model development, so we interpret this evaluation as exploratory.
 
-- The random forest had the lowest cross-validation MAE. On the test set, it was off by 1.397 loneliness points on average (RMSE 1.699, R² 0.158), compared with 1.556 points for the median baseline. With survey weights, MAE was 1.390 for the forest and 1.567 for the baseline.
-- Weighting weakened both contact correlations. Face-to-face remained more strongly associated with loneliness (unweighted ρ = −0.173, weighted ρ = −0.142) than remote contact (−0.139 and −0.102). The unweighted paired bootstrap interval for the difference was −0.045 to −0.023.
-- In the Ridge models, adding both contact types to the context variables lowered test MAE from 1.458 to 1.418. The weighted comparison also improved, from 1.445 to 1.418. Once face-to-face contact was included, adding remote contact made very little difference, especially after weighting.
-- Shuffling the number of close friends increased test error the most, followed by age and relationship status.
+### Evaluation and survey weights
 
-Permutation importance describes how much the fitted model uses each variable. The survey was collected at one point in time, so these results cannot tell us how loneliness changes over time or whether changing contact would reduce loneliness. The test set comes from the same online survey, and we had already explored the full sample in Presentation 1. The weights adjust for measured characteristics, while the original panel recruitment and our complete-core-response filter can still affect who is represented. We report aggregate results and treat estimates for the youngest respondents cautiously because of the small test group.
+Notebook 04 reports test MAE, RMSE and R², paired bootstrap intervals for unweighted MAE differences, prediction diagnostics, permutation importance and errors by age and municipality. The bootstrap resamples test respondents for fixed fitted models and does not capture the full uncertainty of model development. Groups below 30 test respondents are omitted from the subgroup table.
+
+We use the EU27 weight, `w_eu27`, to compare weighted and unweighted correlations and test MAE. It combines within-country demographic adjustment with country population size. Model training and selection remain unweighted. The weighted summaries are point estimates.
+
+### Findings
+
+- Cross-validation selected **Ridge**. Its test MAE was **1.223**, RMSE **1.530** and R² **0.317**. The median baseline MAE was **1.556**.
+- Weighted test MAE was **1.230** for the selected model and **1.567** for the median baseline.
+- With the full context set, adding both friendship-contact types changed Ridge test MAE from **1.227** to **1.223**. The paired mean improvement was **0.0047** points, with a 95% bootstrap interval of **0.0018 to 0.0075**. Positive differences favour adding contact.
+- Weighted Ridge MAE changed from **1.232** for context alone to **1.230** with both contact types.
+- The three largest permutation-importance values belonged to **health_general, age, social_support_d**. Related predictors can share information, so this ranking describes the fitted model's reliance on variables rather than causal importance.
+- The correlations use the same complete-core sample as before. Weighted correlations remained −0.142 for face-to-face contact and −0.102 for remote contact, compared with unweighted values of −0.173 and −0.139.
 
 ### Addressing Students' Questions from Presentation 1
 
-1. **Which factors mattered most, and how strong were the results?** Shuffling the number of close friends increased the forest's test error the most, followed by age and relationship status. Both contact correlations had unweighted p-values below .001, but the associations were weak. The importance ranking describes prediction and does not test the statistical significance of individual predictors.
-2. **Did face-to-face contact predict better than remote contact? Could the pattern have changed over time?** With contact as the only predictor, the face-to-face Ridge model had slightly lower test MAE than the remote model (1.543 vs 1.552). The paired unweighted bootstrap interval for the improvement was 0.002 to 0.017 points. The survey comes from one period, so we cannot assess changes over time.
-3. **Did we widen the analysis to include more variables?** We kept the focus on friendship contact and added context variables to test whether contact still improved prediction when other information was available.
-4. **How did we group the predictors?** We compared contact alone, context alone and combinations of the two. Close-friend count and relationship status were included together in the context models. We did not test a separate interaction between them.
-5. **Did we split the data?** Presentation 1 described the full cleaned sample. In Presentation 2, we trained and tuned models on 19,544 respondents and held out 4,887 for testing.
-6. **Would the results hold outside the EU?** Contact habits and social circumstances may differ elsewhere. We would need data from outside the EU to test whether the findings transfer.
-7. **Could urban and rural settings affect the findings?** Access to meeting places and travel distances could matter. We included municipality type and checked prediction errors by area. Unweighted forest MAE ranged from 1.36 to 1.42 across the three area groups. This comparison shows how errors varied, while differences in the contact–loneliness relationship by area remain an open question.
-8. **What about respondents aged 16–17?** The original survey covered people aged 16 and over. The methodological report describes ethics review and participant consent. We use anonymised responses and report aggregate results. Only 32 respondents in the test set were aged 16–17, so we avoid drawing strong conclusions about this group.
-9. **What interventions might follow?** The findings suggest testing ways to make in-person contact easier, such as accessible local meet-ups, while keeping remote options available. An intervention study would be needed to assess whether these changes reduce loneliness.
+1. **Which factors mattered most?** We now model the contextual measures together. The importance table shows which variables the selected model relied on most. Predictive importance does not establish an independent causal effect or statistical significance for an individual predictor.
+2. **Did face-to-face contact predict better than remote contact? Could this change over time?** Contact-only Ridge test MAE was 1.537 for face-to-face and 1.552 for remote contact. The paired improvement interval was 0.0074 to 0.0238 points. We cannot assess changes over time from this survey period.
+3. **Did we include more variables?** The models now use the full contextual domains prepared for Presentation 1, including support, health, family contact and participation.
+4. **How did we group predictors?** We compare contact alone, context alone and their combinations. Close-friend count and relationship status enter the context models together. We do not fit a separate interaction between those two variables in Ridge.
+5. **Did we split the data?** Presentation 1 explored the cleaned sample. Presentation 2 uses the 80/20 split, with cross-validation on the training portion.
+6. **Would the results hold outside the EU?** Validation on data from other settings would be needed to assess transfer.
+7. **Does urban or rural location matter?** We include municipality type and compare test errors by area. The selected model's unweighted MAE ranges from 1.203 to 1.236 across the three groups. This checks prediction performance by area, while area-specific contact relationships would require a separate analysis.
+8. **What about respondents aged 16–17?** The survey covers ages 16+. Its methodological report describes ethics review and participant consent. We report aggregate results and interpret the small youngest test group (n = 32) cautiously.
+9. **What interventions follow?** These associations can inform questions for intervention studies. Testing whether changes to contact or support reduce loneliness would require an appropriate intervention design.
+
+### Limitations
+
+The selected Ridge model produced 89 test predictions outside the 3–9 outcome range. We report its raw predictions consistently and retain this as a limitation of the linear model.
+
+Self-report, online-panel recruitment, core-response exclusions and a single survey period limit interpretation. Survey weights adjust for measured characteristics but cannot resolve every selection issue. Support overlaps with loneliness and the health relationships may operate in either direction. The models predict concurrently measured scores. Better R² does not demonstrate that causes have been identified or that the model is suitable for individual screening.
+
+### Outputs
+
+The modelling tables are in `results/tables/modelling/` and figures in `results/figures/presentation2/`. Notebook 03 saves the fitted models locally as `data/processed/presentation2_models.joblib`. Notebook 04 checks the sample fingerprint before loading predictions.
 
 ## Repository structure
 
@@ -175,8 +194,8 @@ Permutation importance describes how much the fitted model uses each variable. T
 │   └── 04_model_evaluation_and_interpretation.ipynb
 ├── results/
 │   ├── figures/                                # plots from both presentations
-│   │   ├── presentation1/                       # Presentation 1 plots
-│   │   └── presentation2/                      # Presentation 2 plots
+│   │   ├── presentation1/                      # Presentation 1 plots
+│   │   └── presentation2/         # Presentation 2 plots
 │   └── tables/                                 # summaries and audits, including modelling/
 ├── slides/                                     # presentation slides; untracked PPTX files ignored
 ├── requirements.txt
@@ -190,7 +209,7 @@ Permutation importance describes how much the fitted model uses each variable. T
    pip install -r requirements.txt
    ```
 2. Put the two raw CSV files in `data/raw/` (see **Data** above).
-3. Run `notebooks/01_data_inspection_and_cleaning.ipynb` from top to bottom. This creates the cleaned files in `data/processed/` and the audit tables in `results/tables/presentation1`.
+3. Run `notebooks/01_data_inspection_and_cleaning.ipynb` from top to bottom. This creates the cleaned files in `data/processed/` and the audit tables in `results/tables/`.
 4. Run `notebooks/02_exploratory_data_analysis.ipynb` from top to bottom. This creates the figures and the remaining tables. The final plotting section also exports the larger-font versions to `results/figures/presentation1-slides/`.
 5. Run `notebooks/03_model_development.ipynb` to fit and compare models. It saves fitted models locally in `data/processed/`.
 6. Run `notebooks/04_model_evaluation_and_interpretation.ipynb` to evaluate the models and run the survey-weight checks. The modelling tables go to `results/tables/modelling/`.
